@@ -1,0 +1,10 @@
+window:
+  dimensions:
+    columns: 80
+    lines: 20
+
+font:
+  family: Source Code Pro
+
+key_bindings:
+  - { key: PageUp,   mods: Shift,   action: ScrollPageUp   }
