@@ -16,6 +16,8 @@ zstyle :compinstall filename '/home/huheng/.zshrc'
 bindkey "^[[3~" delete-char
 bindkey "^[3;5~" delete-char
 
+autoload -Uz compinit
+compinit
 
 # End of lines added by compinstall
 #TERM=xterm
@@ -27,7 +29,8 @@ alias ll='ls --color=auto -l'
 alias socks5='http_proxy=socks5://127.0.0.1:1080 https_proxy=socks5://127.0.0.1:1080 all_proxy=socks5://127.0.0.1:1080'
 
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
-compdef config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+
+# compdef config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 
 PATH=/home/huheng/.cargo/bin:$PATH
 
@@ -40,8 +43,6 @@ bindkey "^[[B" history-beginning-search-forward
 
 eval "$(zoxide init zsh)"
 
-autoload -Uz compinit
-compinit
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

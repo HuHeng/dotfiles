@@ -261,14 +261,24 @@ gaps outer -10
 
 bindsym $mod+Shift+f exec --no-startup-id alacritty -t 'alacritty-floating'
 for_window [title="^alacritty-floating$"] floating enable
+for_window [title="^alacritty-floating$"] border 1pixel
+for_window [title="^alacritty-floating$"] move position 2300 1280 
 for_window [title="ffplay"] floating enable
 for_window [title="mpv"] floating enable
+
+for_window [title="Google Chrome$"] border none
+for_window [title="Alacritty"] border 1pixel
 
 # exec --no-startup-id picom --experimental-backends -b # 启动 picom
 exec --no-startup-id picom --config ~/.config/picom/picom.conf
 exec --no-startup-id fcitx5 & # fcitx5 输入法
 #exec --no-startup-id feh --bg-max --randomize ~/wallpaper/*
 exec --no-startup-id feh --bg-fill --randomize ~/wallpaper/*
+
+exec --no-startup-id sh -c 'i3-msg "workspace 1; exec google-chrome-stable"'
+exec --no-startup-id sh -c 'sleep 2; i3-msg "workspace 2; exec alacritty"'
+# exec --no-startup-id i3-msg 'workspace 2; exec alacritty'
+# exec --no-startup-id i3-msg 'workspace 2; exec alacritty; workspace 1'
 
 # exec_always --no-startup-id $HOME/.config/polybar/launch.sh # 开启 polybar
 # bindsym $mod+p exec --no-startup-id polybar-msg cmd toggle # 设置快捷键来显示隐藏 polybar
