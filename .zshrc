@@ -25,6 +25,7 @@ TERM=xterm-256color
 
 alias ls='ls --color=auto'
 alias ll='ls --color=auto -l'
+alias vim='nvim'
 
 alias socks5='http_proxy=socks5://127.0.0.1:1080 https_proxy=socks5://127.0.0.1:1080 all_proxy=socks5://127.0.0.1:1080'
 

@@ -224,7 +224,7 @@ bar {
 }
 
 # lock
-set $Locker i3lock && sleep 1
+set $Locker i3lock -k  --lock-text="locking..." --indicator --ind-pos="w/2:h*3/4" --time-color=00ffff --date-color=00ffff -i /home/huheng/Pictures/selected/hh.jpeg && sleep 1
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
@@ -265,9 +265,14 @@ for_window [title="^alacritty-floating$"] border 1pixel
 for_window [title="^alacritty-floating$"] move position 2300 1280 
 for_window [title="ffplay"] floating enable
 for_window [title="mpv"] floating enable
+for_window [title="feh"] floating enable
 
 for_window [title="Google Chrome$"] border none
 for_window [title="Alacritty"] border 1pixel
+
+#
+floating_minimum_size 1280x720
+floating_maximum_size 2560x1440
 
 # exec --no-startup-id picom --experimental-backends -b # 启动 picom
 exec --no-startup-id picom --config ~/.config/picom/picom.conf
