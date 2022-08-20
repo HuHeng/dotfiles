@@ -7,8 +7,8 @@ fi
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
-HISTSIZE=10000
-SAVEHIST=1000
+HISTSIZE=1000000
+SAVEHIST=1000000
 bindkey -e
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
@@ -31,9 +31,11 @@ alias socks5='http_proxy=socks5://127.0.0.1:1080 https_proxy=socks5://127.0.0.1:
 
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 
+alias ffplay='/home/huheng/scripts/ffp.sh'
+
 # compdef config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 
-PATH=/home/huheng/.cargo/bin:$PATH
+PATH=/home/huheng/.cargo/bin:/home/huheng/go/bin:$PATH
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
